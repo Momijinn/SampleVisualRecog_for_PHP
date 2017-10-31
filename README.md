@@ -1,17 +1,11 @@
-# SampleVisualRecog_for_PHP
+SampleVisualRecog_for_PHP
+====
 PHPでBluemixのVisualRecog(画像解析)のAPIを呼び出すサンプルプログラム
 
-## 動作確認環境
-* PHP 5.5.9-1ubuntu4.22 (cli) (built: Aug  4 2017 19:40:28)
+## Description
+PHPでBlueMixのWatson君の機能であるVisualRecog(画像解析)のAPIを呼び出し、人工知能にて画像に何があるかを判断するプログラム
 
-
-## 使い方
-事前にVisualRecogのAPIを取得してきてください
-
-サンプルとして./img/neko.jpgを解析してみます
-
-起動すると下記のように出てきます
-
+## Demo
 ```bash
 $ php mybluemix_visualrecog.php
 string(173) "ash grey color [0.732]
@@ -23,21 +17,39 @@ animal [0.992]
 mammal [0.992]
 carnivore [0.992]
 feline [0.992]
-cat [0.991]
-"
+cat [0.991]"
 ```
 
-書き換えるところ
-```php
-//取得したAPIKEYを入力してください
-$API_KEY = "YOUR_API_KEY";
+## Requirement
+* 動作確認環境
+    * PHP 5.5.9-1ubuntu4.22 (cli) (built: Aug 4 2017 19:40:28)
 
-//--省略--
+## Usage
+1. 事前にVisualRecogのAPIを取得すること
 
-//解析したい画像ファイルを指定してください
-$path = "./img";
-$img = "neko.jpg";
-$img_path = $path ."/" .$img;
-```
+2. サンプルとして./img/neko.jpgを解析してみます
+
+## Install
+APIを取得後、mybluemix_visualrecog.phpの中にあるAPIを記述するラインにAPIを記述
+
+    ```php
+    //取得したAPIKEYを入力してください
+    $API_KEY = "YOUR_API_KEY";
+
+    //--省略--
+
+    //解析したい画像ファイルを指定してください
+    $path = "./img";
+    $img = "neko.jpg";
+    $img_path = $path ."/" .$img;
+    ```
 
 あとは解析等々をやってくれ結果を出力してくれます
+
+## Licence
+This software is released under the MIT License, see LICENSE.
+
+## Author
+[Twitter](https://twitter.com/momijinn_aka)
+
+[Blog](http://www.autumn-color.com/)
